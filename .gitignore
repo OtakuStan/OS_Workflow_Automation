@@ -1,0 +1,5 @@
+env/
+.env
+
+lib/creds.py
+__pycache__
