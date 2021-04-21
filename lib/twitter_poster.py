@@ -8,7 +8,7 @@ def post_twitter(video_title,video_link):
         auth = tweepy.OAuthHandler(creds["CONSUMER_KEY"],creds["CONSUMER_SECRET"])
         auth.set_access_token(creds["ACCESS_TOKEN"],creds["ACCESS_TOKEN_SECRET"])
         api = tweepy.API(auth)
-        tweet_content = "Otakustan has Posted a Video:" + " " + video_title + " " + video_link
+        tweet_content = f"This is a twitter Automation test. Otakustan has recently posted a New Video: \n {video_title}. Go check it out!!\n {video_link} \n #anime #anime2021"
         api.update_status(tweet_content) 
     except Exception as e:
         raise e
