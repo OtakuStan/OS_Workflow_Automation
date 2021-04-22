@@ -3,18 +3,11 @@ from lib.youtube import get_latest_video
 import json
 import datetime
 import time
-# from apscheduler.schedulers.asyncio import AsyncIOScheduler
-# from apscheduler.triggers.cron import CronTrigger
 
-# video_title='Top 10 Wholesome anime for Christmas'
-# video_link = 'https://youtu.be/hpqmFF1P-NA'
-
-# post_twitter(video_title, video_link)
 VERSION="0.0.1"
 class Automate_Twitter():
     def __init__(self,version):
         self.version = version
-        # self.scheduler = AsyncIOScheduler()
 
     def automating_twitter(self):
         print("Getting Tweet Data")
@@ -41,7 +34,6 @@ class Automate_Twitter():
             print ("tick")
             self.automating_twitter()
             time.sleep(60.0 - ((time.time() - starttime) % 60.0))
-        # self.scheduler.add_job(self.automating_twitter, CronTrigger(day_of_week=6, minute=1))
 
 
 automate = Automate_Twitter(version=VERSION)
